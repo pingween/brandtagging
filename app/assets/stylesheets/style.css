@@ -1,0 +1,41 @@
+a {
+	color: #82837E;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+h1.pagetitle {
+	font-family: 'Pacifico', cursive;
+	font-size: 550%;
+	font-weight:500;
+	text-align: justify;
+	letter-spacing: 0.03em;
+}
+
+.header a {
+	color: #000000;
+	text-decoration: none;
+	
+}
+
+h2 {
+	font-family: 'Libre Baskerville', serif;
+	font-size: 200%;
+	color: #82837E;
+	text-align: right;
+}
+
+h2.subtitle {
+	padding: 0 8px 0 0;
+}
+
+.footnote {
+	color: #82837E;
+	font-size: 60%;
+	font-family: 'Libre Baskerville', serif;
+	text-align: justify;
+	margin: 40px 0 0 0;
+}

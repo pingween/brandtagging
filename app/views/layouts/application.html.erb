@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Brand tagging - Címkézd a márkákat!</title>
+		<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic|Pacifico' rel='stylesheet' type='text/css'>
+		<%= stylesheet_link_tag    "application", "1140", "ie", :media => "all" %>
+		<%= javascript_include_tag "application", "css3-mediaquries" %>
+		
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="threecol"></div>
+				<div class="sixcol header">
+					<h1 class="pagetitle"><%= link_to "Brand tagging", :root %></h1>
+					<h2 class="subtitle">Címkézd a márkákat!</h2>
+				</div>
+				<div class="threecol last"><%= render "home/userinfo" %></div>
+			</div><!-- /row -->
+			<div class="row">
+				<%= yield %>
+			</div><!-- /row -->
+			<div class="row">
+				<div class="threecol last"></div>
+				<div class="sixcol">
+					<p class="footnote">
+						A brandtagging oldal semmilyen kereskedelmi célt nem szolgál. Az oldalon található logók EGYIKE SEM az oldal üzemeltetőjének tulajdona. Az oldal egy tudományos munka "proof of concept"-je. Az abstract letölthető [innen]. / The site brandtagging does not serve any commercial purpose. The logos on the site are NOT the property of the site's owner. This webpage is a "proof of concept" of scientific work. The abstract can be downloaded from [here]. -- info@brandtagging.hu
+					</p>
+				</div>
+				<div class="threecol last"></div>
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</body>
+</html>
