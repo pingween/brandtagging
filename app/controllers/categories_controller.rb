@@ -1,4 +1,7 @@
 class CategoriesController < ApplicationController
+  
+    before_filter :prepare_brands
+  
   # GET /categories
   # GET /categories.json
   def index
@@ -80,4 +83,10 @@ class CategoriesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  private
+    def prepare_brands
+      @brands = Brand.order("name ASC").all
+    end
+  
 end

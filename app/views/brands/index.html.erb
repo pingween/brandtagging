@@ -1,29 +1,29 @@
-<h1>Márkák</h1>
+<h3>Márkák</h3>
 
-<table>
+<table class="list">
   <tr>
     <th>Név</th>
     <th>Logó</th>
     <th>Nyilvános</th>
     <th>Kategória</th>
     <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @brands.each do |brand| %>
   <tr>
-    <td><%= brand.name %></td>
+    <td><%= link_to brand.name, brand %></td>
     <td><%= image_tag brand.logo_url(:listthumb) %></td>
-    <td><%= brand.visible %></td>
-    <td><%= brand.category.name %></td>
-    <td><%= link_to 'Show', brand %></td>
-    <td><%= link_to 'Edit', edit_brand_path(brand) %></td>
-    <td><%= link_to 'Destroy', brand, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= image_tag (brand.visible? ? "check_alt_24x24.png" : "x_alt_24x24.png") %></td>
+    <td><%= link_to brand.category.name, brand.category %></td>
+    <td class"controls">
+    	<%= link_to image_tag("document_stroke_24x24.png", :alt => "Mutat", :class => "icon"), brand %>
+    	<%= link_to image_tag("pen_alt_stroke_24x24.png", :alt => "Szerkesztés", :class => "icon"), edit_brand_path(brand) %>
+    	<%= link_to image_tag("trash_stroke_24x24.png", :alt => "Törlés", :class => "icon"), brand, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Brand', new_brand_path %>
+<%= link_to 'Új márka', new_brand_path %>

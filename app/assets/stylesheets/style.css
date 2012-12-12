@@ -21,6 +21,10 @@ h1.pagetitle {
 	
 }
 
+#header {
+	margin: 10px 0 40px 0;
+}
+
 h2 {
 	font-family: 'Libre Baskerville', serif;
 	font-size: 200%;
@@ -30,6 +34,79 @@ h2 {
 
 h2.subtitle {
 	padding: 0 8px 0 0;
+	font-size: 150%;
+}
+
+h3 {
+	font-family: 'Pacifico', cursive;
+	font-size: 200%;
+	font-weight:400;
+	text-align: justify;
+	letter-spacing: 0.03em;
+	display:inline;
+	margin: 0 10px 0 0;
+}
+
+span.controls {
+	float: right;
+}
+
+#showtitle {
+	position: relative;
+}
+
+#titlecontrols {
+	position: absolute;
+	bottom: 8px;
+	right: 0;
+}
+
+#largelogo {
+	text-align: center;
+}
+
+img.icon {
+	margin: 0 6px 0 6px;
+}
+
+/* table styles */
+table.list
+{
+	/*font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;*/
+	font-size: 12px;
+	/*margin: 45px;*/
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+}
+table.list th
+{
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+	background: #dddddd;
+	border-top: 4px solid #aaaaaa;
+	border-bottom: 1px solid #fff;
+	color: #000;
+}
+
+table.list td
+{
+	padding: 8px;
+	background: #eeeeee; 
+	border-bottom: 1px solid #fff;
+	color: #82837E;
+	border-top: 1px solid transparent;
+}
+
+table.list td.controls {
+	text-align: right;
+}
+
+table.list tr:hover td
+{
+	background: #dddddd;
+	color: #82837E;
 }
 
 .footnote {
@@ -39,3 +116,5 @@ h2.subtitle {
 	text-align: justify;
 	margin: 40px 0 0 0;
 }
+
+
