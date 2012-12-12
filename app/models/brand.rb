@@ -5,4 +5,10 @@ class Brand < ActiveRecord::Base
   validates :name, :uniqueness => true
   
   mount_uploader :logo, LogoUploader
+  
+  def self.random 
+    ids = pluck(:id)
+    find(ids[rand(ids.length)])
+  end
+  
 end
