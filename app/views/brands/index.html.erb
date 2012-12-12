@@ -1,10 +1,11 @@
-<h1>Listing brands</h1>
+<h1>Márkák</h1>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Logo</th>
-    <th>Visible</th>
+    <th>Név</th>
+    <th>Logó</th>
+    <th>Nyilvános</th>
+    <th>Kategória</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,8 +14,9 @@
 <% @brands.each do |brand| %>
   <tr>
     <td><%= brand.name %></td>
-    <td><%= brand.logo %></td>
+    <td><%= image_tag brand.logo_url(:listthumb) %></td>
     <td><%= brand.visible %></td>
+    <td><%= brand.category.name %></td>
     <td><%= link_to 'Show', brand %></td>
     <td><%= link_to 'Edit', edit_brand_path(brand) %></td>
     <td><%= link_to 'Destroy', brand, method: :delete, data: { confirm: 'Are you sure?' } %></td>

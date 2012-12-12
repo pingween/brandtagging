@@ -17,11 +17,15 @@
   </div>
   <div class="field">
     <%= f.label :logo %><br />
-    <%= f.text_field :logo %>
+    <%= f.file_field :logo %>
   </div>
   <div class="field">
     <%= f.label :visible %><br />
     <%= f.check_box :visible %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br />
+    <%= f.collection_select(:category_id, @categories, :id, :name) %>
   </div>
   <div class="actions">
     <%= f.submit %>

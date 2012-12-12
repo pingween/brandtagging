@@ -1,4 +1,7 @@
 class Category < ActiveRecord::Base
-  belongs_to :brand
+  has_many :brand
   attr_accessible :name
+  
+  validates :name, :presence => true
+  validates :name, :uniqueness => true
 end

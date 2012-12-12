@@ -4,8 +4,10 @@ one:
   name: MyString
   logo: MyString
   visible: false
+  category: 
 
 two:
   name: MyString
   logo: MyString
   visible: false
+  category: 

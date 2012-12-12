@@ -1,18 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
-  <%= @brand.name %>
+  <h3><%= @brand.name %></h3>
+  <em class="category"><%= link_to @brand.category.name, @brand.category %></em>
 </p>
-
 <p>
-  <b>Logo:</b>
-  <%= @brand.logo %>
+  <%= image_tag @brand.logo_url(:largethumb) %>
 </p>
 
 <p>
   <b>Visible:</b>
   <%= @brand.visible %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @brand.category.name %>
 </p>
 
 

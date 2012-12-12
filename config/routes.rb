@@ -1,4 +1,7 @@
 Brandtagging::Application.routes.draw do
+  resources :brands
+
+
   resources :categories
 
 

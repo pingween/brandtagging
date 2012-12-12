@@ -1,4 +1,8 @@
 class BrandsController < ApplicationController
+  
+  before_filter :prepare_categories
+  
+  
   # GET /brands
   # GET /brands.json
   def index
@@ -25,6 +29,7 @@ class BrandsController < ApplicationController
   # GET /brands/new.json
   def new
     @brand = Brand.new
+    @brand.visible = true
 
     respond_to do |format|
       format.html # new.html.erb
@@ -80,4 +85,10 @@ class BrandsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  private
+    def prepare_categories
+      @categories = Category.order("name ASC").all 
+    end
+  
 end
